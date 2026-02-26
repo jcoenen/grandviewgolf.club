@@ -19,14 +19,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container about">
       <div class="about__content">
-        <h2>A Picturesque 9-Hole Experience</h2>
-        <p>Grand View Golf Club is a picturesque, well-manicured 9-hole public course established in 1967. We're open daily and welcome the public for a round of golf anytime.</p>
-        <p>Our course features bent grass fairways and greens, with a par of 35 playing from 2,496 to 2,925 yards depending on your tee selection.</p>
-        <p>Outings are always welcomed for companies, groups, and charities. We also offer a <a href="/course-info/banquet-hall/">banquet hall</a> for your events.</p>
+        <p class="welcome-text">Welcome to Grand View Golf Club! Our course is just short drive from Appleton and the Fox Valley, located a few blocks off Hwy 15 in the village of Hortonville.</p>
+        <p>Grand View is open daily and to the public. Outings are always welcomed for companies, groups and charities.</p>
+        <p>Since 1967 Grand View has been dedicated to the pleasures of golf, voted #1 9-hole course in Wisconsin. Come and enjoy our picturesque, well manicured 9-hole public course!</p>
+        <p>Join our emailing list to receive newsletters with current events and announcements.</p>
+        <img src="/images/course-main.jpg" alt="Grand View Golf Club course" class="about__image" />
       </div>
-      <div class="about__contact">
-        <p><strong>Call us:</strong> <a href="tel:920-779-6421">(920) 779-6421</a></p>
-        <p><strong>Address:</strong> 135 John St, Hortonville, WI 54944</p>
+      <div class="about__sidebar">
+        <div class="about__contact">
+          <p><strong>Call us:</strong> <a href="tel:920-779-6421">(920) 779-6421</a></p>
+          <p><strong>Address:</strong> 135 John St, Hortonville, WI 54944</p>
+        </div>
       </div>
     </div>
   </section>
@@ -74,12 +77,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container app-promo">
       <h2>Download Our App</h2>
-      <p>Book tee times, view your handicap, and more from your phone.</p>
-      <div class="app-promo__buttons">
-        <a href="https://apps.apple.com/us/app/grand-view-golf-club/id1560841626" target="_blank" rel="noopener noreferrer">
-          Download on the App Store
-        </a>
-      </div>
+      <a href="https://apps.apple.com/us/app/grand-view-golf-club/id1560841626" target="_blank" rel="noopener noreferrer" class="app-promo__link">
+        <img src="/images/app-icon.png" alt="Grand View Golf Club App" class="app-promo__icon" />
+      </a>
     </div>
   </section>
 </BaseLayout>
@@ -144,8 +144,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   }
 
-  .about h2 {
-    color: var(--color-primary);
+  .welcome-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .about__image {
+    margin-top: 1rem;
+    border-radius: 8px;
   }
 
   .about__contact {
@@ -204,21 +210,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     max-width: 600px;
   }
 
-  .app-promo__buttons {
+  .app-promo__link {
+    display: inline-block;
     margin-top: 1rem;
   }
 
-  .app-promo__buttons a {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #000;
-    color: white;
-    border-radius: 8px;
+  .app-promo__link:hover {
+    opacity: 0.85;
   }
 
-  .app-promo__buttons a:hover {
-    background: #333;
-    text-decoration: none;
+  .app-promo__icon {
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
   }
 
   @media (max-width: 768px) {
