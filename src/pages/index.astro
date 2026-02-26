@@ -26,9 +26,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <img src="/images/course-main.jpg" alt="Grand View Golf Club course" class="about__image" />
       </div>
       <div class="about__sidebar">
-        <div class="about__contact">
-          <p><strong>Call us:</strong> <a href="tel:920-779-6421">(920) 779-6421</a></p>
-          <p><strong>Address:</strong> 135 John St, Hortonville, WI 54944</p>
+        <div class="app-promo">
+          <h2>Download Our App</h2>
+          <a href="/course-info/mobile-app/" class="app-promo__link">
+            <img src="/images/app-icon.png" alt="Grand View Golf Club App" class="app-promo__icon" />
+          </a>
         </div>
       </div>
     </div>
@@ -58,30 +60,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Newsletter Section -->
-  <section class="section section--alt">
-    <div class="container newsletter">
-      <h2>Stay Updated</h2>
-      <p>Join our email list for newsletters with current events and announcements.</p>
-      <!-- Mailchimp embed goes here -->
-      <div class="newsletter__form">
-        <p><em>Newsletter signup form coming soon</em></p>
-        <!--
-        TODO: Add Mailchimp embed code here
-        -->
-      </div>
-    </div>
-  </section>
 
-  <!-- Mobile App Section -->
-  <section class="section">
-    <div class="container app-promo">
-      <h2>Download Our App</h2>
-      <a href="https://apps.apple.com/us/app/grand-view-golf-club/id1560841626" target="_blank" rel="noopener noreferrer" class="app-promo__link">
-        <img src="/images/app-icon.png" alt="Grand View Golf Club App" class="app-promo__icon" />
-      </a>
-    </div>
-  </section>
+
 </BaseLayout>
 
 <style>
@@ -154,15 +134,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border-radius: 8px;
   }
 
-  .about__contact {
-    padding: 1.5rem;
-    background: var(--color-bg-light);
-    border-radius: 8px;
-  }
 
-  .about__contact p {
-    margin-bottom: 0.5rem;
-  }
 
   .quick-links {
     display: grid;
@@ -196,23 +168,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--color-text-light);
   }
 
-  .newsletter {
-    text-align: center;
-    max-width: 600px;
-  }
-
-  .newsletter__form {
-    margin-top: 1.5rem;
-  }
 
   .app-promo {
     text-align: center;
-    max-width: 600px;
+    margin-bottom: 1.5rem;
+  }
+
+  .app-promo h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
   }
 
   .app-promo__link {
     display: inline-block;
-    margin-top: 1rem;
   }
 
   .app-promo__link:hover {
