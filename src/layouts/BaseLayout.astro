@@ -29,6 +29,7 @@ const { title, description = "Grand View Golf Club - Voted #1 9-hole course in W
     <Footer />
 
     <!-- Chronogolf Floating Booking Widget -->
+    <div class="chrono-bookingbutton"></div>
     <script is:inline>
       window.chronogolfSettings = {
         "clubId": 15033,
@@ -38,12 +39,7 @@ const { title, description = "Grand View Golf Club - Voted #1 9-hole course in W
         "color": "#dd0000"
       };
     </script>
-    <script is:inline>
-      !function(d,i){if(!d.getElementById(i)){var s=d.createElement("script");
-      s.id=i,s.src="https://cdn2.chronogolf.com/widgets/v2";
-      var r=d.getElementsByTagName("script")[0];
-      r.parentNode.insertBefore(s,r)}}(document,"chronogolf-js");
-    </script>
+    <script is:inline src="https://cdn2.chronogolf.com/widgets/v2"></script>
   </body>
 </html>
 
