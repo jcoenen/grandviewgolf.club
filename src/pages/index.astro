@@ -32,6 +32,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <img src="/images/app-icon.png" alt="Grand View Golf Club App" class="app-promo__icon" />
           </a>
         </div>
+        <div class="fb-widget">
+          <div id="fb-root"></div>
+          <div class="fb-page" data-href="https://www.facebook.com/GrandviewGolfClub/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/GrandviewGolfClub/" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/GrandviewGolfClub/">Grand View Golf Club</a>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -194,6 +202,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     width: 180px;
     height: 180px;
     border-radius: 20%;
+  }
+
+  .fb-widget {
+    margin-top: 1.5rem;
   }
 
   @media (max-width: 768px) {

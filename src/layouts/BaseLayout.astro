@@ -28,6 +28,17 @@ const { title, description = "Grand View Golf Club - Voted #1 9-hole course in W
     </main>
     <Footer />
 
+    <!-- Facebook SDK -->
+    <script is:inline>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=576823465693057&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <!-- Chronogolf Floating Booking Widget -->
     <div class="chrono-bookingbutton"></div>
     <script is:inline>
