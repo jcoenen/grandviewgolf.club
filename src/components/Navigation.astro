@@ -51,6 +51,7 @@ function isActive(href: string): boolean {
     <a href="/" class="logo">
       <span class="logo__text">Grand View Golf Club</span>
     </a>
+    <a href="tel:920-779-6421" class="header__phone">920-779-6421</a>
 
     <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span>
@@ -111,6 +112,18 @@ function isActive(href: string): boolean {
   }
 
   .logo:hover {
+    text-decoration: none;
+  }
+
+  .header__phone {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    order: 2;
+  }
+
+  .header__phone:hover {
+    color: var(--color-primary);
     text-decoration: none;
   }
 
@@ -187,6 +200,11 @@ function isActive(href: string): boolean {
   }
 
   @media (max-width: 900px) {
+    .header__phone {
+      margin-left: auto;
+      margin-right: 1rem;
+    }
+
     .mobile-toggle {
       display: flex;
     }
