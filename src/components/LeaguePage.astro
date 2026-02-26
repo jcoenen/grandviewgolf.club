@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  name: string;
+  day: string;
+  time?: string;
+  description?: string;
+}
+
+const { name, day, time, description } = Astro.props;
+---
+
+<BaseLayout title={name}>
+  <section class="section">
+    <div class="container">
+      <div class="league-header">
+        <span class="league-day">{day}</span>
+        <h1>{name}</h1>
+        {time && <p class="league-time">{time}</p>}
+        {description && <p class="league-desc">{description}</p>}
+      </div>
+
+      <div class="league-content">
+        <div class="main-content">
+          <!-- Announcements -->
+          <section class="content-section">
+            <h2>Announcements</h2>
+            <slot name="announcements">
+              <p>No current announcements.</p>
+            </slot>
+          </section>
+
+          <!-- Season Info -->
+          <section class="content-section">
+            <h2>Season Information</h2>
+            <slot name="season-info">
+              <p>Season information coming soon.</p>
+            </slot>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <!-- Documents -->
+          <div class="sidebar-section">
+            <h3>Documents</h3>
+            <slot name="documents">
+              <p class="no-docs">No documents available.</p>
+            </slot>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="sidebar-section">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+              <li><a href="/leagues/">All Leagues</a></li>
+              <li><a href="https://www.chronogolf.com/club/15033/widget?medium=widget&source=club" target="_blank" rel="noopener">Book a Tee Time</a></li>
+              <li><a href="/contact/">Contact Us</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .league-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .league-day {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .league-header h1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .league-time {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .league-desc {
+    color: var(--color-text-light);
+  }
+
+  .league-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .league-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .content-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .content-section h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .sidebar-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+  }
+
+  .sidebar-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .no-docs {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .quick-links li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .quick-links li:last-child {
+    border-bottom: none;
+  }
+</style>
+
+<style is:global>
+  .doc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .doc-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .doc-list a:hover {
+    background: var(--color-bg);
+  }
+</style>

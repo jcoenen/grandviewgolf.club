@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Directions">
+  <section class="section">
+    <div class="container">
+      <h1>Directions</h1>
+
+      <div class="address">
+        <h2>Grand View Golf Club</h2>
+        <p>
+          135 John St<br>
+          Hortonville, WI 54944
+        </p>
+        <p><a href="tel:920-779-6421">(920) 779-6421</a></p>
+      </div>
+
+      <div class="directions">
+        <h2>Getting Here</h2>
+        <p>We're located just a few blocks off Highway 15 in the village of Hortonville, a short drive from Appleton and the Fox Valley.</p>
+
+        <h3>From Appleton</h3>
+        <ol>
+          <li>Head north on US-45 N / WI-76 N</li>
+          <li>Continue onto WI-15 E toward Hortonville</li>
+          <li>In Hortonville, turn right onto John St</li>
+          <li>Grand View Golf Club will be on your right</li>
+        </ol>
+
+        <h3>From Green Bay</h3>
+        <ol>
+          <li>Take US-41 S to WI-15 W</li>
+          <li>Follow WI-15 W to Hortonville</li>
+          <li>Turn left onto John St</li>
+          <li>Grand View Golf Club will be on your right</li>
+        </ol>
+      </div>
+
+      <div class="map">
+        <h2>Map</h2>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.5!2d-88.6361!3d44.3394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDIwJzIxLjgiTiA4OMKwMzgnMTAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Grand View Golf Club location">
+          </iframe>
+        </div>
+        <p class="map-note">
+          <a href="https://maps.google.com/?q=135+John+St,+Hortonville,+WI+54944" target="_blank" rel="noopener noreferrer">
+            Open in Google Maps
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .address {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    max-width: 400px;
+  }
+
+  .address h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .directions {
+    margin-bottom: 2rem;
+  }
+
+  .directions h2 {
+    color: var(--color-primary);
+  }
+
+  .directions h3 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .directions ol {
+    padding-left: 1.5rem;
+  }
+
+  .directions li {
+    margin-bottom: 0.5rem;
+  }
+
+  .map h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .map-embed {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .map-note {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+</style>

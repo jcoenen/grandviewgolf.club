@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Rates">
+  <section class="section">
+    <div class="container">
+      <h1>Rates</h1>
+      <p class="intro">Current green fees and cart rental rates for Grand View Golf Club.</p>
+
+      <div class="rates-section">
+        <h2>Green Fees</h2>
+        <table class="rates-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Weekday</th>
+              <th>Weekend/Holiday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9 Holes</td>
+              <td>$16</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>18 Holes</td>
+              <td>$25</td>
+              <td>$29</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rates-section">
+        <h2>Cart Rental</h2>
+        <p class="rates-note">Per person seat fee</p>
+        <table class="rates-table">
+          <tbody>
+            <tr>
+              <td>9 Holes</td>
+              <td>$10</td>
+            </tr>
+            <tr>
+              <td>18 Holes</td>
+              <td>$16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rates-section">
+        <h2>Special Rates</h2>
+        <ul>
+          <li><strong>Seniors (62+):</strong> $2 off normal green fees, Monday-Friday</li>
+          <li><strong>Juniors (ages 12-17):</strong> $10 for 9 holes, $19 for 18 holes</li>
+          <li><strong>Adult/Child Special:</strong> Children 11 and under play for $5 per 9 holes when accompanied by a paying adult</li>
+          <li><strong>Weekday Early Bird:</strong> $10 walking, Monday-Friday before 9 AM</li>
+        </ul>
+      </div>
+
+      <div class="rates-section">
+        <h2>Mini Pass</h2>
+        <p>Ten 9-hole rounds, valid anytime</p>
+        <table class="rates-table">
+          <tbody>
+            <tr>
+              <td>Walking</td>
+              <td>$150</td>
+            </tr>
+            <tr>
+              <td>Riding</td>
+              <td>$240</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rates-section">
+        <h2>Practice Range</h2>
+        <table class="rates-table">
+          <tbody>
+            <tr>
+              <td>Small Bucket (24 balls)</td>
+              <td>$5</td>
+            </tr>
+            <tr>
+              <td>Medium Bucket (48 balls)</td>
+              <td>$9</td>
+            </tr>
+            <tr>
+              <td>Large Bucket (72 balls)</td>
+              <td>$12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">Rates subject to change. Call <a href="tel:920-779-6421">(920) 779-6421</a> for current pricing. See <a href="/course-info/membership/">Membership</a> for season pass rates.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+
+  .rates-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .rates-section h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .rates-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .rates-table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .rates-table th {
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+
+  .rates-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .rates-section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .rates-section li:last-child {
+    border-bottom: none;
+  }
+
+  .note {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--color-bg-light);
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+</style>

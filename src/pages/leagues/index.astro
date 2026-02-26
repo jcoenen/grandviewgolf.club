@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const leagues = [
+  {
+    name: 'Monday Ladies',
+    slug: 'monday-ladies',
+    day: 'Monday',
+    description: 'Weekly ladies league'
+  },
+  {
+    name: "Tuesday Men's",
+    slug: 'tuesday-mens',
+    day: 'Tuesday',
+    description: "Weekly men's league"
+  },
+  {
+    name: "Wednesday Men's",
+    slug: 'wednesday-mens',
+    day: 'Wednesday',
+    description: "Weekly men's league"
+  },
+  {
+    name: 'Fall League',
+    slug: 'fall',
+    day: 'Seasonal',
+    description: 'Fall season league'
+  }
+];
+---
+
+<BaseLayout title="Leagues">
+  <section class="section">
+    <div class="container">
+      <h1>Leagues</h1>
+      <p class="intro">Join one of our weekly golf leagues at Grand View Golf Club. Leagues run throughout the golf season with friendly competition and great camaraderie.</p>
+
+      <div class="leagues-grid">
+        {leagues.map(league => (
+          <a href={`/leagues/${league.slug}/`} class="league-card">
+            <span class="league-card__day">{league.day}</span>
+            <h2>{league.name}</h2>
+            <p>{league.description}</p>
+            <span class="league-card__link">View Details</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="general-info">
+        <h2>League Information</h2>
+        <p>Interested in joining a league? Contact the clubhouse for registration information and availability.</p>
+        <p><strong>Phone:</strong> <a href="tel:920-779-6421">(920) 779-6421</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    max-width: 700px;
+  }
+
+  .leagues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .league-card {
+    display: block;
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .league-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+
+  .league-card__day {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .league-card h2 {
+    color: var(--color-text);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .league-card p {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+  }
+
+  .league-card__link {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .general-info {
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    max-width: 600px;
+  }
+
+  .general-info h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+</style>

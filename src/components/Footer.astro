@@ -1,0 +1,75 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__info">
+      <h3>Grand View Golf Club</h3>
+      <p>135 John St<br>Hortonville, WI 54944</p>
+      <p><a href="tel:920-779-6421">(920) 779-6421</a></p>
+    </div>
+
+    <div class="footer__hours">
+      <h4>Hours</h4>
+      <p>Open daily, weather permitting<br>Call for current hours</p>
+    </div>
+
+    <div class="footer__social">
+      <h4>Connect</h4>
+      <a href="https://www.facebook.com/GrandViewGolfClub" target="_blank" rel="noopener noreferrer">
+        Facebook
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; {currentYear} Grand View Golf Club. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-text);
+    color: white;
+    margin-top: auto;
+  }
+
+  .footer a {
+    color: white;
+  }
+
+  .footer a:hover {
+    color: #90EE90;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .footer h3, .footer h4 {
+    margin-bottom: 1rem;
+  }
+
+  .footer h3 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+  }
+
+  .footer h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .footer__bottom {
+    background: rgba(0,0,0,0.2);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+</style>

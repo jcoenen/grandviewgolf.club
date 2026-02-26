@@ -1,0 +1,51 @@
+---
+import LeaguePage from '../../components/LeaguePage.astro';
+---
+
+<LeaguePage
+  name="Tuesday Men's League"
+  day="Tuesday"
+  time="Tee times starting at 4:00 PM"
+  description="Weekly men's golf league running throughout the summer season."
+>
+  <div slot="announcements">
+    <!-- Add announcements here -->
+    <p>Check back for weekly updates and results.</p>
+  </div>
+
+  <div slot="season-info">
+    <p>The Tuesday Men's League runs from May through August.</p>
+    <h4>Tee Time Booking</h4>
+    <p>Members can reserve tee times up to 6 days in advance:</p>
+    <ul>
+      <li>Phone: <a href="tel:920-779-6421">(920) 779-6421</a></li>
+      <li>Online: <a href="https://www.chronogolf.com/club/grand-view-golf-club" target="_blank" rel="noopener">Chronogolf</a></li>
+      <li>Mobile App</li>
+    </ul>
+  </div>
+
+  <div slot="documents">
+    <ul class="doc-list">
+      <!-- TODO: Add actual document links -->
+      <li><a href="/documents/leagues/tuesday-mens/schedule.pdf">Schedule & Roster</a></li>
+      <li><a href="/documents/leagues/tuesday-mens/rules.pdf">League Rules</a></li>
+      <li><a href="/documents/leagues/tuesday-mens/standings.pdf">Standings</a></li>
+      <li><a href="/documents/leagues/tuesday-mens/scores.pdf">Scores</a></li>
+    </ul>
+  </div>
+</LeaguePage>
+
+<style>
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+</style>

@@ -1,0 +1,36 @@
+---
+import LeaguePage from '../../components/LeaguePage.astro';
+---
+
+<LeaguePage
+  name="Fall League"
+  day="Seasonal"
+  description="Fall season golf league for those who want to extend the golf season."
+>
+  <div slot="announcements">
+    <!-- Add announcements here -->
+    <p>Fall league registration opens in late summer. Check back for details.</p>
+  </div>
+
+  <div slot="season-info">
+    <p>The Fall League runs from September through October, weather permitting.</p>
+    <p>This league is open to all skill levels and is a great way to get in some extra golf before winter.</p>
+    <h4>Contact</h4>
+    <p>For more information about the fall league, call <a href="tel:920-779-6421">(920) 779-6421</a>.</p>
+  </div>
+
+  <div slot="documents">
+    <ul class="doc-list">
+      <!-- TODO: Add actual document links when available -->
+      <li><a href="/documents/leagues/fall/schedule.pdf">Schedule</a></li>
+      <li><a href="/documents/leagues/fall/rules.pdf">League Rules</a></li>
+    </ul>
+  </div>
+</LeaguePage>
+
+<style>
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

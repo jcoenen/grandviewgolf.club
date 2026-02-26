@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Events">
+  <section class="section">
+    <div class="container">
+      <h1>Events</h1>
+      <p class="intro">Upcoming tournaments, special events, and activities at Grand View Golf Club.</p>
+
+      <div class="events-grid">
+        <a href="/events/calendar/" class="event-card">
+          <h2>Event Calendar</h2>
+          <p>View all upcoming events and tournaments</p>
+        </a>
+
+        <a href="/course-info/banquet-hall/" class="event-card">
+          <h2>Host an Outing</h2>
+          <p>Plan your golf outing or corporate event</p>
+        </a>
+      </div>
+
+      <!-- Upcoming Events -->
+      <section class="upcoming">
+        <h2>Upcoming Events</h2>
+        <!-- TODO: Add events as they're scheduled -->
+        <p>Check back for upcoming tournaments and events for the 2025 season.</p>
+
+        <!--
+        <div class="event-list">
+          <article class="event-item">
+            <div class="event-item__date">
+              <span class="month">Jun</span>
+              <span class="day">15</span>
+            </div>
+            <div class="event-item__info">
+              <h3>Member-Guest Tournament</h3>
+              <p>Annual member-guest scramble. Registration opens June 1.</p>
+            </div>
+          </article>
+        </div>
+        -->
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .event-card {
+    display: block;
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .event-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+
+  .event-card h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-card p {
+    margin: 0;
+    color: var(--color-text-light);
+  }
+
+  .featured-event {
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+  }
+
+  .featured-event h2 {
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .event-date {
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+  }
+
+  .event-docs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .upcoming h2 {
+    color: var(--color-primary);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+  }
+
+  .event-item__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    padding: 0.5rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .event-item__date .month {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .event-item__date .day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .event-item__info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-item__info p {
+    margin: 0;
+    color: var(--color-text-light);
+  }
+</style>

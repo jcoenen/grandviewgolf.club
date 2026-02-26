@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Membership">
+  <section class="section">
+    <div class="container">
+      <h1>Membership</h1>
+      <p class="intro">Join Grand View Golf Club and enjoy unlimited golf all season long.</p>
+
+      <div class="membership-options">
+        <div class="membership-card">
+          <h2>Adult</h2>
+          <p class="price">$670</p>
+          <p class="price-note">Unlimited green fees for the season</p>
+        </div>
+
+        <div class="membership-card">
+          <h2>Senior</h2>
+          <p class="price">$650</p>
+          <p class="price-note">Unlimited green fees for the season</p>
+        </div>
+
+        <div class="membership-card">
+          <h2>Adult Couple</h2>
+          <p class="price">$910</p>
+          <p class="price-note">Two adult memberships</p>
+        </div>
+
+        <div class="membership-card">
+          <h2>Senior Couple</h2>
+          <p class="price">$870</p>
+          <p class="price-note">Two senior memberships</p>
+        </div>
+
+        <div class="membership-card featured">
+          <h2>Family</h2>
+          <p class="price">$1,100</p>
+          <p class="price-note">2 adults + children 17 and under in same household</p>
+        </div>
+      </div>
+
+      <p class="discount-note">All season passes receive <strong>$20 discount</strong> when paying with cash or check.</p>
+
+      <div class="additional-section">
+        <h2>Young Member Passes</h2>
+        <div class="pass-grid">
+          <div class="pass-item">
+            <h3>College Pass</h3>
+            <p class="price">$275</p>
+            <p class="price-note">Ages 19-23</p>
+          </div>
+          <div class="pass-item">
+            <h3>Kids Pass</h3>
+            <p class="price">$175</p>
+            <p class="price-note">Ages 6-18</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="additional-section">
+        <h2>Cart Pass</h2>
+        <div class="pass-grid">
+          <div class="pass-item">
+            <h3>Single</h3>
+            <p class="price">$300</p>
+          </div>
+          <div class="pass-item">
+            <h3>Couple</h3>
+            <p class="price">$450</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="additional-section">
+        <h2>Range Pass</h2>
+        <div class="range-info">
+          <p class="price">$200</p>
+          <p>Includes 2 medium buckets daily (48 balls each). Available for all ages.</p>
+          <ul>
+            <li>Add family members for $100 per person</li>
+            <li>Unlimited range option: $150 when added to adult/senior/couple pass</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="restrictions">
+        <h2>Junior Policies</h2>
+        <ul>
+          <li>Children under 11 must be accompanied by an adult</li>
+          <li>Riding carts unavailable for juniors unless with an adult (19+ years old)</li>
+          <li>Pull carts provided free for juniors</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <h2>Become a Member</h2>
+        <p>Contact us for more information or to sign up.</p>
+        <p><strong>Email:</strong> <a href="mailto:clubhouse@grandviewgolf.club">clubhouse@grandviewgolf.club</a></p>
+        <p><strong>Phone:</strong> <a href="tel:920-779-6421">(920) 779-6421</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+
+  .membership-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .membership-card {
+    padding: 1.5rem;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .membership-card.featured {
+    border-color: var(--color-primary);
+    border-width: 2px;
+  }
+
+  .membership-card h2 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .price-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .discount-note {
+    padding: 1rem;
+    background: #e8f5e9;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .additional-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .additional-section h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .pass-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 500px;
+  }
+
+  .pass-item {
+    padding: 1.25rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .pass-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pass-item .price {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .range-info {
+    padding: 1.5rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    max-width: 500px;
+  }
+
+  .range-info .price {
+    margin-bottom: 0.5rem;
+  }
+
+  .range-info ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .range-info li {
+    margin-bottom: 0.25rem;
+  }
+
+  .restrictions {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: #fff8e1;
+    border-radius: 8px;
+    max-width: 500px;
+  }
+
+  .restrictions h2 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .restrictions ul {
+    padding-left: 1.5rem;
+    margin: 0;
+  }
+
+  .restrictions li {
+    margin-bottom: 0.25rem;
+  }
+
+  .cta {
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    max-width: 500px;
+  }
+
+  .cta h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+</style>

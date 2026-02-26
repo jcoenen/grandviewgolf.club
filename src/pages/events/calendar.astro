@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Events data - easy to update
+const events = [
+  // Example event structure:
+  // {
+  //   date: 'June 15, 2025',
+  //   title: 'Member-Guest Tournament',
+  //   description: 'Annual member-guest scramble format.',
+  //   time: '9:00 AM Shotgun Start',
+  // },
+];
+
+// Recurring events / league schedule
+const leagueSchedule = [
+  { day: 'Monday', name: 'Ladies League', time: '4:00 PM', season: 'May - August' },
+  { day: 'Tuesday', name: "Men's League", time: '4:00 PM', season: 'May - August' },
+  { day: 'Wednesday', name: "Men's League", time: '4:00 PM', season: 'May - August' },
+  { day: 'Fall', name: 'Fall League', time: 'Varies', season: 'September - October' },
+];
+---
+
+<BaseLayout title="Event Calendar">
+  <section class="section">
+    <div class="container">
+      <h1>Event Calendar</h1>
+      <p class="intro">Upcoming events, tournaments, and league schedule at Grand View Golf Club.</p>
+
+      <!-- Google Calendar -->
+      <div class="calendar-embed">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=23k0tnfqapogvjlqd53mp43t6s%40group.calendar.google.com&ctz=America/Chicago"
+          width="100%"
+          height="600"
+          frameborder="0"
+          scrolling="no"
+          title="Grand View Golf Club Event Calendar">
+        </iframe>
+      </div>
+
+      <!-- League Schedule -->
+      <div class="events-section">
+        <h2>League Schedule</h2>
+        <p>Weekly leagues run throughout the golf season.</p>
+        <div class="league-schedule">
+          {leagueSchedule.map(league => (
+            <div class="league-item">
+              <span class="league-day">{league.day}</span>
+              <div class="league-info">
+                <strong>{league.name}</strong>
+                <span class="league-details">{league.time} &bull; {league.season}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="league-link">
+          <a href="/leagues/">View league details and standings</a>
+        </p>
+      </div>
+
+      <!-- Book Tee Times -->
+      <div class="events-section">
+        <h2>Book a Tee Time</h2>
+        <p>Reserve your spot up to 6 days in advance.</p>
+        <a href="https://www.chronogolf.com/club/15033/widget?medium=widget&source=club" class="btn" target="_blank" rel="noopener noreferrer">
+          Book Online
+        </a>
+      </div>
+
+      <!-- Contact for Outings -->
+      <div class="contact-cta">
+        <h2>Planning an Outing?</h2>
+        <p>Contact us to schedule your golf outing, tournament, or corporate event at Grand View.</p>
+        <p><strong>Phone:</strong> <a href="tel:920-779-6421">(920) 779-6421</a></p>
+        <p><strong>Email:</strong> <a href="mailto:clubhouse@grandviewgolf.club">clubhouse@grandviewgolf.club</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+
+  .calendar-embed {
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .calendar-embed iframe {
+    display: block;
+  }
+
+  .events-section {
+    margin-bottom: 3rem;
+  }
+
+  .events-section h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .event-date {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+  }
+
+  .event-date .date {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .event-date .time {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+
+  .event-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-info p {
+    margin: 0;
+    color: var(--color-text-light);
+  }
+
+  .no-events {
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .no-events p:last-child {
+    margin-bottom: 0;
+  }
+
+  .league-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .league-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+  }
+
+  .league-day {
+    display: inline-block;
+    min-width: 100px;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .league-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .league-details {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+
+  .league-link {
+    margin-top: 1rem;
+  }
+
+  .contact-cta {
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    max-width: 500px;
+  }
+
+  .contact-cta h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .event-item {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .event-date {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .league-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Course Info">
+  <section class="section">
+    <div class="container">
+      <h1>Course Information</h1>
+      <p class="intro">Grand View Golf Club is a 9-hole public course located in Hortonville, Wisconsin. Voted #1 9-hole course in Wisconsin.</p>
+
+      <div class="info-grid">
+        <a href="/course-info/rates/" class="info-card">
+          <h2>Rates</h2>
+          <p>Green fees, cart rentals, and special rates</p>
+        </a>
+
+        <a href="/course-info/membership/" class="info-card">
+          <h2>Membership</h2>
+          <p>Annual membership options and benefits</p>
+        </a>
+
+        <a href="/course-info/scorecard/" class="info-card">
+          <h2>Scorecard</h2>
+          <p>Hole-by-hole yardages and par information</p>
+        </a>
+
+        <a href="/course-info/banquet-hall/" class="info-card">
+          <h2>Banquet Hall</h2>
+          <p>Host your event at our clubhouse</p>
+        </a>
+
+        <a href="/course-info/directions/" class="info-card">
+          <h2>Directions</h2>
+          <p>How to find us in Hortonville</p>
+        </a>
+
+        <a href="/course-info/mobile-app/" class="info-card">
+          <h2>Mobile App</h2>
+          <p>Download our app for easy booking</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    display: block;
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .info-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+
+  .info-card h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-card p {
+    margin: 0;
+    color: var(--color-text-light);
+  }
+</style>

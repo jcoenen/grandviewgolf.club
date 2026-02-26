@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Scorecard">
+  <section class="section">
+    <div class="container">
+      <h1>Scorecard</h1>
+      <p class="intro">Grand View Golf Club - 9 Holes, Par 35</p>
+
+      <div class="scorecard-wrapper">
+        <table class="scorecard">
+          <thead>
+            <tr>
+              <th>Hole</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>Out</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tees-black">
+              <td>Black</td>
+              <td>277</td>
+              <td>346</td>
+              <td>340</td>
+              <td>178</td>
+              <td>388</td>
+              <td>363</td>
+              <td>346</td>
+              <td>189</td>
+              <td>498</td>
+              <td>2,925</td>
+            </tr>
+            <tr class="tees-white">
+              <td>White</td>
+              <td>266</td>
+              <td>339</td>
+              <td>324</td>
+              <td>167</td>
+              <td>372</td>
+              <td>353</td>
+              <td>316</td>
+              <td>179</td>
+              <td>483</td>
+              <td>2,799</td>
+            </tr>
+            <tr class="tees-gold">
+              <td>Gold</td>
+              <td>255</td>
+              <td>339</td>
+              <td>291</td>
+              <td>114</td>
+              <td>356</td>
+              <td>343</td>
+              <td>316</td>
+              <td>168</td>
+              <td>420</td>
+              <td>2,602</td>
+            </tr>
+            <tr class="tees-red">
+              <td>Red</td>
+              <td>255</td>
+              <td>331</td>
+              <td>281</td>
+              <td>103</td>
+              <td>304</td>
+              <td>343</td>
+              <td>302</td>
+              <td>157</td>
+              <td>420</td>
+              <td>2,496</td>
+            </tr>
+            <tr class="par">
+              <td>Par</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+              <td>3</td>
+              <td>5</td>
+              <td>35</td>
+            </tr>
+            <tr class="handicap">
+              <td>Handicap</td>
+              <td>17</td>
+              <td>7</td>
+              <td>5</td>
+              <td>11</td>
+              <td>1</td>
+              <td>3</td>
+              <td>15</td>
+              <td>13</td>
+              <td>9</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="course-stats">
+        <h2>Course Ratings</h2>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Tees</th>
+              <th>Yards</th>
+              <th>Rating</th>
+              <th>Slope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tee-black">Black</td>
+              <td>2,925</td>
+              <td>68.2</td>
+              <td>123</td>
+            </tr>
+            <tr>
+              <td class="tee-white">White</td>
+              <td>2,799</td>
+              <td>72.0</td>
+              <td>122</td>
+            </tr>
+            <tr>
+              <td class="tee-gold">Gold</td>
+              <td>2,602</td>
+              <td>70.0</td>
+              <td>115</td>
+            </tr>
+            <tr>
+              <td class="tee-red">Red</td>
+              <td>2,496</td>
+              <td>67.8</td>
+              <td>112</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="course-info">
+        <h2>Course Details</h2>
+        <ul>
+          <li><strong>Designed by:</strong> Edward Lockie and Bob Lohmann</li>
+          <li><strong>Opened:</strong> 1967</li>
+          <li><strong>Fairways:</strong> Bent grass</li>
+          <li><strong>Greens:</strong> Bent grass</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+  }
+
+  .scorecard-wrapper {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+  }
+
+  .scorecard {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  .scorecard th,
+  .scorecard td {
+    padding: 0.75rem 0.5rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .scorecard th {
+    background: var(--color-text);
+    color: white;
+    font-weight: 600;
+  }
+
+  .scorecard th:first-child,
+  .scorecard td:first-child {
+    text-align: left;
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+
+  .scorecard th:last-child,
+  .scorecard td:last-child {
+    background: var(--color-bg-light);
+    font-weight: 600;
+  }
+
+  .tees-black td:first-child { color: #000; }
+  .tees-white td:first-child { color: #666; }
+  .tees-gold td:first-child { color: #b8860b; }
+  .tees-red td:first-child { color: #cc0000; }
+  .par { background: var(--color-bg-light); }
+  .par td { font-weight: 600; }
+  .handicap { color: var(--color-text-light); }
+
+  .course-stats {
+    margin-bottom: 2.5rem;
+  }
+
+  .course-stats h2,
+  .course-info h2 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .stats-table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+  }
+
+  .stats-table th,
+  .stats-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .stats-table th {
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+
+  .tee-black { font-weight: 600; }
+  .tee-white { font-weight: 600; color: #666; }
+  .tee-gold { font-weight: 600; color: #b8860b; }
+  .tee-red { font-weight: 600; color: #cc0000; }
+
+  .course-info ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .course-info li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .course-info li:last-child {
+    border-bottom: none;
+  }
+</style>

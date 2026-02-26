@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact">
+  <section class="section">
+    <div class="container">
+      <h1>Contact Us</h1>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <h2>Grand View Golf Club</h2>
+            <p class="address">
+              135 John St<br>
+              Hortonville, WI 54944
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Phone</h3>
+            <p><a href="tel:920-779-6421">(920) 779-6421</a></p>
+          </div>
+
+          <div class="info-card">
+            <h3>Hours</h3>
+            <p>Open daily during golf season, weather permitting.</p>
+            <p>Call for current hours and course conditions.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Follow Us</h3>
+            <p>
+              <a href="https://www.facebook.com/GrandViewGolfClub" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h2>Send a Message</h2>
+          <!--
+          TODO: Add contact form
+          Options:
+          1. Netlify Forms (if hosting on Netlify)
+          2. Formspree
+          3. Simple mailto link
+          -->
+          <p>For inquiries about tee times, events, leagues, or the banquet hall, please give us a call.</p>
+          <p><a href="tel:920-779-6421" class="btn">Call (920) 779-6421</a></p>
+
+          <div class="booking-cta">
+            <h3>Book a Tee Time</h3>
+            <p>Book online through Chronogolf:</p>
+            <a href="https://www.chronogolf.com/club/15033/widget?medium=widget&source=club" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+              Book Online
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>Location</h2>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.5!2d-88.6361!3d44.3394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDIwJzIxLjgiTiA4OMKwMzgnMTAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Grand View Golf Club location">
+          </iframe>
+        </div>
+        <p class="map-link">
+          <a href="https://maps.google.com/?q=135+John+St,+Hortonville,+WI+54944" target="_blank" rel="noopener noreferrer">
+            Get Directions in Google Maps
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .info-card {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .info-card:last-child {
+    border-bottom: none;
+  }
+
+  .info-card h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-light);
+  }
+
+  .address {
+    font-size: 1.1rem;
+  }
+
+  .contact-form {
+    padding: 2rem;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+  }
+
+  .contact-form h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .booking-cta {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .booking-cta h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn--secondary {
+    background: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  .btn--secondary:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .map-section h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .map-embed {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .map-link {
+    margin-top: 0.5rem;
+  }
+</style>
