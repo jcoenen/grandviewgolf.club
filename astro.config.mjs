@@ -20,5 +20,10 @@ export default defineConfig({
     '/grand-view-wednesday-mens-league/': '/leagues/wednesday-mens/',
     '/fall-league/': '/leagues/fall/',
     '/contact-us/': '/contact/',
+    // Event results pages (old WordPress slugs)
+    '/monday-event-results/': '/leagues/monday-ladies/event-results/',
+    '/event-results/': '/leagues/tuesday-mens/event-results/',
+    '/wednesday-league-past-event-results/': '/leagues/wednesday-mens/event-results/',
+    '/fall-league-past-event-results/': '/leagues/fall/event-results/',
   },
 });

@@ -1,0 +1,61 @@
+---
+import LeaguePage from '../../../components/LeaguePage.astro';
+---
+
+<LeaguePage
+  name="Fall League"
+  day="Fall"
+  description="Fall season golf league — a great way to extend the golf season."
+  keyFileUrl="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_TeamStandings.pdf"
+>
+  <div slot="announcements">
+    <p>Check back for weekly updates and results.</p>
+  </div>
+
+  <ul slot="documents">
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_Rules.pdf" target="_blank" rel="noopener">Fall League Rules</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_TeamStandings.pdf" target="_blank" rel="noopener">Team Standings</a></li>
+    <li><a href="/leagues/fall/event-results/">Past Event Results</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_IndAvg.pdf" target="_blank" rel="noopener">Scoring Average</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_ParBirdyTotals.pdf" target="_blank" rel="noopener">Par/Birdie/Bogey Totals</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL13.pdf" target="_blank" rel="noopener">Misc Stats</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL5A_G.pdf" target="_blank" rel="noopener">Gross Skins</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL5A_N.pdf" target="_blank" rel="noopener">Net Skins</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_SkinTotals.pdf" target="_blank" rel="noopener">Skin Totals</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL7.pdf" target="_blank" rel="noopener">Score History</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/FallLeague/GVFL_Subs.pdf" target="_blank" rel="noopener">Find A Sub</a></li>
+  </ul>
+
+  <div slot="season-info">
+    <p>The Fall League runs September through late October, weather permitting. Open to all skill levels.</p>
+
+    <h4 class="red">Handicap order: 5, 6, 2, 7, 3, 9, 4, 8, 1</h4>
+
+    <h4 class="red">Tee Box Color / Attire</h4>
+    <p>
+      September 3 – White Tee / Hawaiian Shirt<br />
+      September 10 – Black Tee / Red-White-Blue patriotic shirt for 9/11<br />
+      September 17 – White Tee / Blue Shirt<br />
+      September 24 – Black Tee / Yellow Shirt and or "Flat Hat"<br />
+      October 1 – White Tee / Orange Shirt<br />
+      October 8 – Black Tee / Red Shirt<br />
+      October 15 – White Tee / NFL, MLB, NBA Attire<br />
+      October 22 – Black Tee / Black Shirt<br />
+      October 29 – Black Tee / Halloween Costume, Camo or Blaze Orange Attire
+    </p>
+
+    <h4>Contact</h4>
+    <p>For more information, call <a href="tel:920-779-6421">(920) 779-6421</a>.</p>
+  </div>
+</LeaguePage>
+
+<style>
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h4.red {
+    color: #cc0000;
+  }
+</style>

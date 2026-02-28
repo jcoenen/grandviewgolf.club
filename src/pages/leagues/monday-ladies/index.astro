@@ -1,0 +1,69 @@
+---
+import LeaguePage from '../../../components/LeaguePage.astro';
+---
+
+<LeaguePage
+  name="Monday Ladies League"
+  day="Monday"
+  time="Tee times starting at 4:00 PM"
+  description="Weekly ladies golf league running throughout the summer season."
+  keyFileUrl="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML2A.pdf"
+>
+  <div slot="announcements">
+    <div class="announcement">
+      <p><strong>Remember to write FULL NAMES OF SUBS on scorecards and turn in at the bar when done!</strong></p>
+      <p><strong>***YOU MAY NEED TO REFRESH YOUR PAGE IF YOU AREN'T SEEING THE MOST CURRENT STATS***</strong></p>
+    </div>
+  </div>
+
+  <ul slot="documents">
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML_Roster.pdf" target="_blank" rel="noopener">Schedule / Roster</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML_Rules.pdf" target="_blank" rel="noopener">League Rules</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML_Subs.pdf" target="_blank" rel="noopener">Find A Substitute</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML2A.pdf" target="_blank" rel="noopener">Current Event Pairings</a></li>
+    <li><a href="/leagues/monday-ladies/event-results/">Past Event Results</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML3B5.pdf" target="_blank" rel="noopener">Team Standings</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML4C.pdf" target="_blank" rel="noopener">Scoring Average</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML13.pdf" target="_blank" rel="noopener">Misc Stats</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML8C.pdf" target="_blank" rel="noopener">Hole Averages</a></li>
+    <li><a href="https://grandviewgolf.club/wp-content/uploads/MondayLeague/GVML7.pdf" target="_blank" rel="noopener">Score History</a></li>
+  </ul>
+
+  <div slot="season-info">
+    <p>The Monday Ladies League runs from May through August. New members are welcome!</p>
+    <h4>Tee Time Booking</h4>
+    <p>Tee times for the following week are available 6 days in advance on Tuesdays at 8 AM via phone, online, or the app. You can also book in person at the clubhouse Monday evenings after your league round.</p>
+    <ul>
+      <li>Phone: <a href="tel:920-779-6421">(920) 779-6421</a></li>
+      <li>Online: <a href="https://www.chronogolf.com/club/15033/widget?medium=widget&source=club" target="_blank" rel="noopener">Chronogolf</a></li>
+      <li>Mobile App</li>
+    </ul>
+  </div>
+</LeaguePage>
+
+<style>
+  .announcement {
+    padding: 1rem;
+    background: var(--color-bg-light);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .announcement p:last-child {
+    margin-bottom: 0;
+  }
+
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+</style>
